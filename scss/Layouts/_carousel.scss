@@ -1,0 +1,28 @@
+.carousel {
+    padding-bottom: 50px;
+    background-image: url(../../img/Violet_top_left_wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    .container {
+        display: flex;
+        padding: 0 60px;
+        .carousel__content {
+            padding-top: 80px;
+            width: 50%;
+            p {
+                @include styleText($text-title,$text-semibold,$color-purple);
+                margin-bottom: 0.5em;
+            }
+            h2 {
+                @include styleText($text-big-title,$text-bold,$color-black);
+            }
+        }
+        .carousel__pic {
+            img {
+                width: 100%;
+                margin-top: -120px;
+            }
+        }
+    }
+}

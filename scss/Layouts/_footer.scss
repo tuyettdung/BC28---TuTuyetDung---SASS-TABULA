@@ -1,0 +1,72 @@
+footer {
+    background-image: url(http://tabula.bold-themes.com/wavy/wp-content/uploads/sites/3/2019/03/footer_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .container {
+        .footer__content {
+            padding: 6.5em 3em;
+            .footer__col {
+                padding-right: 60px;
+                padding-bottom: 50px;
+                h5 {
+                    @include styleText(24px, $text-semibold, $color-white);
+                    padding-bottom: 25px;
+                }
+                .footer__row {
+                    line-height: 1.8em;
+                    padding-bottom: 8px;
+                    i {
+                        @include styleText(0.9em, 550, $color-white); 
+                        padding-right: 5px; 
+                    }
+                    span {
+                        @include styleText(0.9em, $text-regular, $color-white);
+                    }
+                    a {
+                        i{
+                            padding-top: 18px;
+                            padding-right: 10px;
+                            &:hover {
+                                color: $color-black;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer__col-1 {
+                p {
+                    padding-bottom: 25px;
+                    border-bottom: 1px solid rgba(0, 0, 0, .1);
+                    padding: .8em 0;
+                    a {
+                        @include styleText(0.9em, $text-regular, $color-white);
+                        line-height: 1;
+                        transition: all 0.2s;
+                        &:hover {
+                            color: #e3abd4;
+                        }
+                    }
+                }
+            }
+            .footer__col-2 {
+                input {
+                    @include styleButton ($text-sm, $text-regular, $color-white, transparent, 15px, 25px, 1px solid rgba(255,255,255,.3), 50px);
+                    text-align: center;
+                }
+                ::-webkit-input-placeholder {
+                    color: $color-white;
+                }
+                button {
+                    @include styleButton (14px, $text-semibold, $color-black, $color-white, 15px, 75px, none, 50px);
+                        margin-top: 15px;
+                        margin-bottom: 50px;
+                        transition: all 0.2s;
+                        &:hover {
+                            @include styleButton (14px, $text-semibold, $color-white, $color-purple, 15px, 75px, 1px solid #fff, 50px);
+                        }
+                }
+            }
+        }
+    }
+}

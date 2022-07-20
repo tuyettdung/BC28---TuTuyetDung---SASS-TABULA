@@ -1,0 +1,53 @@
+.porfolio {
+    background-color: $color-bg-gray;
+    background-image: url(../../img/Wave_White_bottom_right_shape_01.png) !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    .container {
+        .port__1 {    
+            padding: 20px;
+            .card {
+                border: none;
+                background-color: transparent;
+                .card__wrap {    
+                    padding: 0 5px;
+                    border-radius: 10px;
+                    &:hover {
+                        box-shadow: 0px 30px 30px -10px rgba(0,0,0,.2);
+                    }
+                    .card__pic {
+                        transition: linear 0.5s ease-in-out,filter 0.5s ease-in-out;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            border-radius: 10px 10px 0 0;
+                            transform: scale3d(1,1,1);
+                            &:hover {
+                                transform: scale3d(1.1,1.1,1.1);
+                            }
+                        }
+                    }
+                    .card__content {
+                        padding: 30px 20px;
+                        text-align: center;
+                        background-color: rgba(255, 255, 255, 1);
+                        border-radius: 0 0 10px 10px;
+                        span {
+                            @include styleText($text-sm, $text-semibold, $color-purple);
+                        }
+                        h4 {
+                            padding: 10px 0;
+                            @include styleText ($text-md, $text-bold, $color-black);
+                        }
+                        p {
+                            padding: 5px 0;
+                            line-height: 1.8em;
+                            @include styleText ($text-p, 500, black);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+//Helpers
+@import'./scss/Helpers/mixin';
+@import'./scss/Helpers/variables';
+
+//Base
+@import'./scss/Base/reset';
+@import './scss/Base/customize';
+
+//Components
+@import'./scss/Components/buttons';
+@import'./scss/Components/card';
+
+//Layouts:
+@import'./scss/Layouts/header';
+@import'./scss/Layouts/carousel';
+@import'./scss/Layouts/footer';
+@import'./scss/Layouts/portfolio';
+@import './scss/Layouts/contact';

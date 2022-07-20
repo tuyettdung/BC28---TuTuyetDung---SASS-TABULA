@@ -1,0 +1,91 @@
+header {
+    background-image: url(../../img/yellow_top_wave_01.png);
+    background-size: cover;
+    height: 200px;
+    .container {
+        nav {
+            display: flex;
+            .logo {
+                img {
+                    width: 100%;
+                }
+            }
+            .header__nav {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .menu {
+                    padding-left: 150px;
+                    .header__list {
+                        display: flex;
+                        transition: all 0.2s;
+                        li {
+                            a {
+                                @include styleText ($text-sm, $text-semibold, $color-black);
+                                padding-right: 50px;
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -40px;
+                                    left: 12px;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background-color: $color-purple;
+                                    transform: scale(0, 0);
+                                    transition: all 0.2s;
+                                }
+                                &:hover {
+                                    @include styleText ($text-sm, $text-semibold, $color-purple);
+                                    &::before {
+                                        transform: scale(1, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .header__contact {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 30px;
+                    button {
+                        @include styleButton (14px, 500, $color-white, $color-purple, 0px, 25px, 1px solid, 50px);
+                        height: 45px;
+                        transition: all 0.2s;
+                        &:hover {
+                            color: $color-purple ;
+                            background-color: $color-white;
+                        }
+                    }
+                    .header__icon {
+                        padding-left: 15px;
+                        transition: all 0.2s;
+                        a {
+                            i {
+                                padding-right: 8px;
+                                @include styleText(14px, $text-regular, $color-black);
+                                &:hover {
+                                    @include styleText (14px, $text-regular, $color-purple);
+                                }
+                            }
+                        }
+    
+                    }
+    
+                }
+            }
+        }
+    }
+}
+.nav-fixed {
+    background-color: $color-white;
+    height: 50px;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 5%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
